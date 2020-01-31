@@ -6,7 +6,7 @@ namespace UniversityClinicClass
 {
     public class Patient
     {
-        private int Bloodlevel;
-        private int HealthStatus;
+        private int bloodlevel = 50; 
+        //private int HealthStatus;
     }
 }

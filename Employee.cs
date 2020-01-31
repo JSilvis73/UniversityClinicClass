@@ -6,16 +6,26 @@ namespace UniversityClinicClass
 {
    public class Employee
     {
-        private string Name;
-        private int EmployeeNumber;
-        private int Salary;
-        private bool PaidStatus;
-
-        public class employee(string name, int employeeNumber, int salary, bool paidstatus)
+        public string Name { get; set;}
+        public int EmployeeNumber { get; set;}
+        public int Salary { get; set;}
+        public bool PaidStatus { get; set;}
+        public Employee()
         {
-         
+            PaidStatus = false;
         }
 
+        public Employee(string name, int employeeNumber, bool paidStatus)
+        {
+         Name = name;
+         EmployeeNumber = employeeNumber;
+         PaidStatus = paidStatus;
+
+        }
+        public virtual void PayEmployee()
+        {
+           PaidStatus = true;
+        }
 
     }
 }
