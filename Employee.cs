@@ -4,8 +4,9 @@ using System.Text;
 
 namespace UniversityClinicClass
 {
-   public class Employee
+    public class Employee
     {
+    List<Employee> allEmployees = new List<Employee>();
         public string Name { get; set;}
         public int EmployeeNumber { get; set;}
         public int Salary { get; set;}
