@@ -11,6 +11,7 @@ namespace UniversityClinicClass
         public Receptionist() : base()
         {
             OnPhone = true;
+            Salary = 45000;
         }
 
 

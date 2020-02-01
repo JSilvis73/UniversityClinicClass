@@ -10,7 +10,8 @@ namespace UniversityClinicClass
 
         public Nurse() : base()
         {
-            NumOfPatients = 5;
+            NumOfPatients = 3;
+            Salary = 50000;
         }
 
 

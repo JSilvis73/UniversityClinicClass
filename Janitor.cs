@@ -11,6 +11,7 @@ namespace UniversityClinicClass
         public Janitor() : base()
         {
             IsSweeping = true;
+            Salary = 40000;
         }
 
     }

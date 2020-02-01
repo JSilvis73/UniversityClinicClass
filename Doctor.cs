@@ -7,10 +7,13 @@ namespace UniversityClinicClass
     public class Doctor : Employee
     {
         public string Specialty { get; set; }
+        
 
         public Doctor() : base()
         {
             Specialty = "Gynecologist";
+            Salary = 90000;
+
         }
 
 
