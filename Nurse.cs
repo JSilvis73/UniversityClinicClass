@@ -10,8 +10,11 @@ namespace UniversityClinicClass
 
         public Nurse() : base()
         {
+            Name = "Nurse Joy";
+            EmployeeNumber = 2;
             NumOfPatients = 3;
             Salary = 50000;
+       
         }
 
 

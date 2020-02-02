@@ -9,12 +9,15 @@ namespace UniversityClinicClass
         public string Specialty { get; set; }
         
 
-        public Doctor() : base()
+        public Doctor() 
         {
+            Name = "Dr. Dre";
+            EmployeeNumber = 1;
             Specialty = "Gynecologist";
             Salary = 90000;
 
         }
+        
 
 
 

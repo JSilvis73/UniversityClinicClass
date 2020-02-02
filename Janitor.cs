@@ -10,6 +10,8 @@ namespace UniversityClinicClass
 
         public Janitor() : base()
         {
+            Name = "Rick";
+            EmployeeNumber = 4;
             IsSweeping = true;
             Salary = 40000;
         }

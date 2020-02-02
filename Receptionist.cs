@@ -10,6 +10,8 @@ namespace UniversityClinicClass
 
         public Receptionist() : base()
         {
+            Name = "Pam";
+            EmployeeNumber = 3;
             OnPhone = true;
             Salary = 45000;
         }
