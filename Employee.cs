@@ -18,14 +18,20 @@ namespace UniversityClinicClass
          new Receptionist() { Name= "Margaret", EmployeeNumber= 3},
          new Janitor() {Name="Pat", EmployeeNumber=4}
 
-            };
+         };
 
         public void ViewInfo()
         {
-            for (int i = 0; i < employees.Count; i++)
+            foreach (Employee employee in employees)
             {
-                Console.WriteLine(employees[i].Name +"   "+ employees[i].EmployeeNumber +"  "+ employees[i].Salary +"  "+ employees[i].PaidStatus);
+                Console.WriteLine(employee.Name + "   " + employee.EmployeeNumber + "  " + employee.Salary + "  " + employee.PaidStatus);
             }
+
+
+            //for (int i = 0; i < employees.Count; i++)
+            //{
+            //    Console.WriteLine(employees[i].Name +"   "+ employees[i].EmployeeNumber +"  "+ employees[i].Salary +"  "+ employees[i].PaidStatus);
+            //}
         }
 
         public Employee()
