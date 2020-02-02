@@ -8,20 +8,28 @@ namespace UniversityClinicClass
     {
 
         public string Specialty { get; set; }
-        public string Name { get; set; }
-
-        
-
-        public Doctor() 
+   
+        public Doctor()
         {
-            Name = "Dr. Dre";
-            EmployeeNumber = 1;
-            Specialty = "Gynecologist";
             Salary = 90000;
+            PaidStatus = false;
+        }
+
+        public Doctor(string name, int id, string specialty) 
+        {
+            Name = name;
+            EmployeeNumber = id;
+            Specialty = specialty;
+            Salary = 90000;
+            PaidStatus = false;
 
         }
-        
 
+        public override void ViewInfo()
+        {
+            base.ViewInfo();
+            Console.Write($"{Specialty} Hello From Dr.");
+        }
 
 
     }

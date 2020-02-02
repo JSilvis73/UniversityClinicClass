@@ -8,12 +8,20 @@ namespace UniversityClinicClass
     {
         public bool IsSweeping { get; set; }
 
-        public Janitor() : base()
+        public Janitor()
         {
-            Name = "Rick";
-            EmployeeNumber = 4;
             IsSweeping = true;
             Salary = 40000;
+            PaidStatus = false;
+        }
+
+        public Janitor(string name, int id)
+        {
+            Name = name;
+            EmployeeNumber = id;
+            IsSweeping = true;
+            Salary = 40000;
+            PaidStatus = false;
         }
 
     }

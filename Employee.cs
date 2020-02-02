@@ -36,40 +36,27 @@ namespace UniversityClinicClass
 
         public void CreateEmployeeList()
         {
-            employees.Add(new Doctor() { Name = "Dr.Dre", EmployeeNumber = 1 });
-            employees.Add(new Nurse() { Name = "Nurse Joy", EmployeeNumber = 2 });
+            employees.Add(new Doctor() {Name = "Dr.Dre", EmployeeNumber = 1, Specialty = "Gyno" });
+            employees.Add(new Nurse() { Name = "Nurse Joy", EmployeeNumber = 2, NumOfPatients = 1 });
             employees.Add(new Receptionist() { Name = "Margaret", EmployeeNumber = 3 });
             employees.Add(new Janitor() { Name = "Pat", EmployeeNumber = 4 });
         }
 
-        //Employee[] employees = new Employee[4];
 
-        //Employee[] customClassArray;
-
-        //Employee[] employees = new Employee[4];
-
-
-
-
-        public void ViewInfo()
+        public virtual void ViewInfo()
         {
-            //foreach (Employee employee in employees)
-            //{
-            //    Console.WriteLine(employees);
-            //}
-            //employee.Name + "   " + employee.EmployeeNumber + "  " + employee.Salary + "  " + employee.PaidStatus
-
-            for (int i = 0; i < employees.Count; i++)
-            {
-                Console.WriteLine(employees[i].Name + "   " + employees[i].EmployeeNumber + "  " + employees[i].Salary + "  " + employees[i].PaidStatus);
-            }
+                Console.Write($"{EmployeeNumber} {Name} {Salary} {PaidStatus}");
         }
 
-     
 
-
-
-
+        public void ShowList()
+        {
+            foreach (Employee employeeList in employees)
+            {
+                employeeList.ViewInfo();
+                Console.WriteLine();
+            }
+        }
 
         public virtual void PayEmployee()
         {
@@ -94,10 +81,7 @@ namespace UniversityClinicClass
             //}
 
         }
-        public string GetData()
-        {
-            return this.Name + "  " + this.EmployeeNumber + "  " + this.Salary + "  " + PaidStatus;
-        }
+
 
     
 

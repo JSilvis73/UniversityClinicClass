@@ -8,13 +8,19 @@ namespace UniversityClinicClass
     {
         public int NumOfPatients { get; set; }
 
-        public Nurse() : base()
+        public Nurse()
         {
-            Name = "Nurse Joy";
-            EmployeeNumber = 2;
-            NumOfPatients = 3;
             Salary = 50000;
-       
+            PaidStatus = false;
+        }
+
+        public Nurse(string name, int id, int numOfPatients)
+        {
+            Name = name;
+            EmployeeNumber = id;
+            NumOfPatients = numOfPatients;
+            Salary = 50000;
+            PaidStatus = false;
         }
 
 
