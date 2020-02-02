@@ -34,5 +34,11 @@ namespace UniversityClinicClass
         {
             Console.WriteLine("An Employee can't draw Blood.");
         }
+
+        public override void CareForPatient(Patient firstPatient)
+        {
+            Console.WriteLine("An Employee can't care for patient.");
+        }
+
     }
 }

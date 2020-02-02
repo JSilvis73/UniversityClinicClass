@@ -36,5 +36,11 @@ namespace UniversityClinicClass
             firstPatient.BloodLevel -= 10;
             Console.WriteLine($"Dr. Drew Blood and new level is {firstPatient.BloodLevel}");
         }
+
+        public override void CareForPatient(Patient firstPatient)
+        {
+            firstPatient.HealthStatus = +10;
+            Console.WriteLine($"Dr. Drew Blood and new level is {firstPatient.HealthStatus}");
+        }
     }
 }

@@ -69,12 +69,12 @@ namespace UniversityClinicClass
 
         }
 
-        public void SelectEmployee(Patient firstPatient)
+        public void SelectEmployeeForBlood(Patient firstPatient)
         {
             Console.WriteLine("Pick an employee to draw blood");
             string input = Console.ReadLine();
-            int userInput = Convert.ToInt32(input);
-            Employee selectedEmployee = employees[userInput - 1];
+            int userChoice = Convert.ToInt32(input);
+            Employee selectedEmployee = employees[userChoice - 1];
             Console.WriteLine(selectedEmployee.Name);
             selectedEmployee.DrawBlood(firstPatient);
 
@@ -86,7 +86,24 @@ namespace UniversityClinicClass
             Console.WriteLine("An Employee can't draw Blood.");
         }
 
-    
+        public void SelectEmployeeCareForBlood(Patient firstPatient)
+        {
+            Console.WriteLine("Pick an employee to draw blood");
+            string input = Console.ReadLine();
+            int userChoice = Convert.ToInt32(input);
+            Employee selectedEmployee = employees[userChoice - 1];
+            Console.WriteLine(selectedEmployee.Name);
+            selectedEmployee.CareForPatient(firstPatient);
+
+        }
+
+
+        public virtual void CareForPatient(Patient firstPatient)
+        {
+            Console.WriteLine("An Employee can't care for a Patient.");
+        }
+
+
 
     }
 }

@@ -32,7 +32,13 @@ namespace UniversityClinicClass
         public override void DrawBlood(Patient firstPatient)
         {
             firstPatient.BloodLevel -= 6;
-            Console.WriteLine($"Dr. Drew Blood and new level is {firstPatient.BloodLevel}");
+            Console.WriteLine($"Nurse Drew Blood and new level is {firstPatient.BloodLevel}");
+        }
+
+        public override void CareForPatient(Patient firstPatient)
+        {
+            firstPatient.HealthStatus = +5;
+            Console.WriteLine($"Nurse Drew Blood and new level is {firstPatient.HealthStatus}");
         }
     }
 

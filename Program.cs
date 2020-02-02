@@ -25,7 +25,7 @@ namespace UniversityClinicClass
                 Console.WriteLine("Press 1 if you would like to view a list of all hospital employees");
                 Console.WriteLine("Press 2 if you would like to pay all employees");
                 Console.WriteLine("Press 3 Draw Patient Blood");
-                Console.WriteLine("Press 4 if you would like to check the employees current action");
+                Console.WriteLine("Press 4 Care For Patient");
                 Console.WriteLine("Press 5 if you would like to check the status of the patients");
                 Console.WriteLine("Press 6 if you would like to exit");
                 string userInput = Console.ReadLine();
@@ -42,10 +42,15 @@ namespace UniversityClinicClass
 
                     case "3":
                         myEmployee.ShowList();
-                        myEmployee.SelectEmployee(firstPatient);
+                        myEmployee.SelectEmployeeForBlood(firstPatient);
                         break;
 
                     case "4":
+                        myEmployee.ShowList();
+                        myEmployee.SelectEmployeeCareForBlood(firstPatient);
+                        break;
+
+                    case "5":
                         playing = false;
                         Console.WriteLine("Exiting Program");
                         break;
