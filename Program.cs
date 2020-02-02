@@ -16,12 +16,15 @@ namespace UniversityClinicClass
             //Seeed Data here
             myEmployee.CreateEmployeeList();
 
+            //Create a patient
+            Patient firstPatient = new Patient();
+
             while (playing)
             {
                 Console.WriteLine("Main_Menu \n");
                 Console.WriteLine("Press 1 if you would like to view a list of all hospital employees");
                 Console.WriteLine("Press 2 if you would like to pay all employees");
-                Console.WriteLine("Press 3 if you would like all employees to perform their tasks");
+                Console.WriteLine("Press 3 Draw Patient Blood");
                 Console.WriteLine("Press 4 if you would like to check the employees current action");
                 Console.WriteLine("Press 5 if you would like to check the status of the patients");
                 Console.WriteLine("Press 6 if you would like to exit");
@@ -38,6 +41,11 @@ namespace UniversityClinicClass
                         break;
 
                     case "3":
+                        myEmployee.ShowList();
+                        myEmployee.SelectEmployee(firstPatient);
+                        break;
+
+                    case "4":
                         playing = false;
                         Console.WriteLine("Exiting Program");
                         break;

@@ -6,7 +6,15 @@ namespace UniversityClinicClass
 {
     public class Patient
     {
-        private int bloodlevel = 50; 
-        //private int HealthStatus;
+
+        public int BloodLevel { get; set; }
+        public int HealthStatus { get; set; }
+
+        public Patient()
+        {
+            BloodLevel = 50;
+            HealthStatus = 100;
+        }
+
     }
 }

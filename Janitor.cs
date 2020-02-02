@@ -30,6 +30,9 @@ namespace UniversityClinicClass
             Console.Write($"{IsSweeping}");
         }
 
-
+        public override void DrawBlood(Patient firstPatient)
+        {
+            Console.WriteLine("An Employee can't draw Blood.");
+        }
     }
 }

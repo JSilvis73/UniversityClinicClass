@@ -32,5 +32,11 @@ namespace UniversityClinicClass
             Console.Write($"{OnPhone}");
         }
 
+
+        public override void DrawBlood(Patient firstPatient)
+        {
+            Console.WriteLine("An Employee can't draw Blood.");
+        }
     }
 }
+

@@ -7,10 +7,6 @@ namespace UniversityClinicClass
     {
 
         public List<Employee> employees = new List<Employee>();
-        //employees.Add(doctor);
-        //    employees.Add(nurse);
-        //    employees.Add(receptionist);
-        //    employees.Add(janitor)
 
         public string Name { get; set; }
         public int EmployeeNumber { get; set; }
@@ -63,21 +59,32 @@ namespace UniversityClinicClass
             PaidStatus = true;
         }
 
-
-
-
-
-
         public void PayAllEmployees()
         {
             foreach (Employee employeeList in employees)
             {
                 employeeList.PayEmployee();
-      
+
             }
 
         }
 
+        public void SelectEmployee(Patient firstPatient)
+        {
+            Console.WriteLine("Pick an employee to draw blood");
+            string input = Console.ReadLine();
+            int userInput = Convert.ToInt32(input);
+            Employee selectedEmployee = employees[userInput - 1];
+            Console.WriteLine(selectedEmployee.Name);
+            selectedEmployee.DrawBlood(firstPatient);
+
+        }
+
+
+        public virtual void DrawBlood(Patient firstPatient)
+        {
+            Console.WriteLine("An Employee can't draw Blood.");
+        }
 
     
 
