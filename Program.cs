@@ -9,14 +9,14 @@ namespace UniversityClinicClass
 
         public static void Main(string[] args)
         {
-            Doctor doctor = new Doctor();
-            Nurse nurse = new Nurse();
-            Receptionist receptionist = new Receptionist();
-            Janitor janitor = new Janitor();
-            Employee employee = new Employee();
+            //Doctor doctor = new Doctor();
+            //Nurse nurse = new Nurse();
+            //Receptionist receptionist = new Receptionist();
+            //Janitor janitor = new Janitor();
+            //Employee employee = new Employee();
             //Employee hospital = new Employee();
 
-            //List<Employee> employees = new List<Employee>();
+            List<Employee> employees = new List<Employee>();
             //employees.Add(doctor);
             //employees.Add(nurse);
             //employees.Add(receptionist);

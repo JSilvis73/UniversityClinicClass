@@ -6,7 +6,10 @@ namespace UniversityClinicClass
 {
     public class Doctor : Employee
     {
+
         public string Specialty { get; set; }
+        public string Name { get; set; }
+
         
 
         public Doctor() 
