@@ -26,5 +26,11 @@ namespace UniversityClinicClass
         }
 
 
+        public override void ViewInfo()
+        {
+            base.ViewInfo();
+            Console.Write($"{OnPhone}");
+        }
+
     }
 }

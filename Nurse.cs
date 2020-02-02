@@ -23,6 +23,13 @@ namespace UniversityClinicClass
             PaidStatus = false;
         }
 
+        public override void ViewInfo()
+        {
+            base.ViewInfo();
+            Console.Write($"{NumOfPatients}");
+        }
+
+
 
 
     }

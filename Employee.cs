@@ -64,21 +64,17 @@ namespace UniversityClinicClass
         }
 
 
-        public virtual void PayAllEmployees()
+
+
+
+
+        public void PayAllEmployees()
         {
-            //foreach (var employee in employees)
-            //{
-            //    employee.PaidStatus = true;
-
-            //}
-            //for (int i = 0; i < employees.Count; i++)
-            //{
-
-            //    employees[i].PayEmployee();
-
-            //    Console.WriteLine(Name,PaidStatus);
-
-            //}
+            foreach (Employee employeeList in employees)
+            {
+                employeeList.PayEmployee();
+      
+            }
 
         }
 
