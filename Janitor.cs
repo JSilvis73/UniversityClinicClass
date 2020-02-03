@@ -6,20 +6,20 @@ namespace UniversityClinicClass
 {
     public class Janitor : Employee
     {
-        public bool IsSweeping { get; set; }
+        public string WorkStatus { get; set; }
 
         public Janitor()
         {
-            IsSweeping = true;
+            WorkStatus = "Is Sweeping";
             Salary = 40000;
             PaidStatus = false;
         }
 
-        public Janitor(string name, int id)
+        public Janitor(string name, int id, string workStatus)
         {
             Name = name;
             EmployeeNumber = id;
-            IsSweeping = true;
+            WorkStatus = workStatus;
             Salary = 40000;
             PaidStatus = false;
         }
@@ -27,7 +27,7 @@ namespace UniversityClinicClass
         public override void ViewInfo()
         {
             base.ViewInfo();
-            Console.Write($"{IsSweeping}");
+            Console.Write($"{WorkStatus}");
         }
 
         public override void DrawBlood(Patient firstPatient)

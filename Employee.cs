@@ -32,8 +32,8 @@ namespace UniversityClinicClass
 
         public void CreateEmployeeList()
         {
-            employees.Add(new Doctor() {Name = "Dr.Dre", EmployeeNumber = 1, Specialty = "Gyno" });
-            employees.Add(new Nurse() { Name = "Nurse Joy", EmployeeNumber = 2, NumOfPatients = 1 });
+            employees.Add(new Doctor() {Name = "Dr.Dre", EmployeeNumber = 1, Specialty = "Diagnosing Patient | Specialty: Gyno" });
+            employees.Add(new Nurse() { Name = "Nurse Joy", EmployeeNumber = 2, WorkStatus = "Taking care of 1 Patient" });
             employees.Add(new Receptionist() { Name = "Margaret", EmployeeNumber = 3 });
             employees.Add(new Janitor() { Name = "Pat", EmployeeNumber = 4 });
         }
@@ -41,7 +41,7 @@ namespace UniversityClinicClass
 
         public virtual void ViewInfo()
         {
-                Console.Write($"{EmployeeNumber} {Name} {Salary} {PaidStatus}");
+                Console.Write($"|Employees ID: {EmployeeNumber}| Employee Name: {Name}| Salary:{Salary}| Paid Status: {PaidStatus}|Work Status: ");
         }
 
 
@@ -94,6 +94,7 @@ namespace UniversityClinicClass
             Employee selectedEmployee = employees[userChoice - 1];
             Console.WriteLine(selectedEmployee.Name);
             selectedEmployee.CareForPatient(firstPatient);
+         
 
         }
 

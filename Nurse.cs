@@ -6,19 +6,20 @@ namespace UniversityClinicClass
 {
     public class Nurse : Employee
     {
-        public int NumOfPatients { get; set; }
+        public string WorkStatus { get; set; }
 
         public Nurse()
         {
             Salary = 50000;
+            WorkStatus = "Taking Care of 1 Patient";
             PaidStatus = false;
         }
 
-        public Nurse(string name, int id, int numOfPatients)
+        public Nurse(string name, int id, string workStatus)
         {
             Name = name;
             EmployeeNumber = id;
-            NumOfPatients = numOfPatients;
+            WorkStatus = workStatus;
             Salary = 50000;
             PaidStatus = false;
         }
@@ -26,7 +27,7 @@ namespace UniversityClinicClass
         public override void ViewInfo()
         {
             base.ViewInfo();
-            Console.Write($"{NumOfPatients}");
+            Console.Write($"{WorkStatus}");
         }
 
         public override void DrawBlood(Patient firstPatient)

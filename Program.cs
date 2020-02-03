@@ -9,7 +9,7 @@ namespace UniversityClinicClass
 
         public static void Main(string[] args)
         {
-
+            Patient fstPatient = new Patient();
             Employee myEmployee = new Employee();
             bool playing = true;
 
@@ -22,23 +22,26 @@ namespace UniversityClinicClass
             while (playing)
             {
                 Console.WriteLine("Main_Menu \n");
-                Console.WriteLine("Press 1 if you would like to view a list of all hospital employees");
-                Console.WriteLine("Press 2 if you would like to pay all employees");
+                Console.WriteLine("Press 1 Display List of Employees");
+                Console.WriteLine("Press 2 Pay All Employees");
                 Console.WriteLine("Press 3 Draw Patient Blood");
                 Console.WriteLine("Press 4 Care For Patient");
-                Console.WriteLine("Press 5 if you would like to check the status of the patients");
-                Console.WriteLine("Press 6 if you would like to exit");
+                Console.WriteLine("Press 5 Exit Program");
                 string userInput = Console.ReadLine();
-          
+
                 switch (userInput)
                 {
                     case "1":
+                        Console.WriteLine("-----------------------------------------------------");
                         myEmployee.ShowList();
                         break;
 
                     case "2":
                         myEmployee.PayAllEmployees();
+                        Console.WriteLine("All your employees have been paid.");
                         break;
+
+
 
                     case "3":
                         myEmployee.ShowList();
@@ -50,6 +53,7 @@ namespace UniversityClinicClass
                         myEmployee.SelectEmployeeCareForBlood(firstPatient);
                         break;
 
+
                     case "5":
                         playing = false;
                         Console.WriteLine("Exiting Program");
@@ -59,8 +63,8 @@ namespace UniversityClinicClass
                         break;
                 }
 
-            } 
-            
+            }
+
         }
     }
 }

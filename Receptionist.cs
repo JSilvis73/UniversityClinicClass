@@ -6,21 +6,21 @@ namespace UniversityClinicClass
 {
     public class Receptionist : Employee
     {
-        public bool OnPhone { get; set; }
+        public string WorkStatus { get; set; }
 
         public Receptionist()
         {
     
-            OnPhone = true;
+            WorkStatus = "On Phone";
             Salary = 45000;
             PaidStatus = false;
         }
 
-        public Receptionist(string name, int id )
+        public Receptionist(string name, int id, string workStatus)
         {
             Name = name;
             EmployeeNumber = id;
-            OnPhone = true;
+            WorkStatus = workStatus;
             Salary = 45000;
             PaidStatus = false;
         }
@@ -29,7 +29,7 @@ namespace UniversityClinicClass
         public override void ViewInfo()
         {
             base.ViewInfo();
-            Console.Write($"{OnPhone}");
+            Console.Write($"{WorkStatus}");
         }
 
 
